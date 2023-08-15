@@ -1,8 +1,7 @@
  create table notification_task(
     id bigserial primary key,
+    text varchar,
     chatId bigint,
-    message varchar(200),
-    time timestamp
+    dateTime timestamp
  );
-
 
