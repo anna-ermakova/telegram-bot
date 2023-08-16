@@ -9,8 +9,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Service;
-import pro.sky.telegrambot.servise.NotificationTaskService;
-import pro.sky.telegrambot.servise.TelegramBotService;
+import pro.sky.telegrambot.service.NotificationTaskService;
+import pro.sky.telegrambot.service.TelegramBotService;
 
 import javax.annotation.PostConstruct;
 import java.time.LocalDateTime;
@@ -53,7 +53,7 @@ public class TelegramBotUpdatesListener implements UpdatesListener {
             LOG.info("Processing update: {}", update);
             Long chatId = update.message().chat().id();
             Message message = update.message();
-            String userName = update.message().from().firstName();
+            //String userName = update.message().from().firstName();
             String text = message.text();
             LocalDateTime dateTime;
             if (update.message() != null && text != null) {
@@ -61,8 +61,8 @@ public class TelegramBotUpdatesListener implements UpdatesListener {
                 if (text.equals("/start")) {
                     telegramBotService.sendMessage(
                             chatId,
-                            "Привет, " + userName + "! " +
-                                    "Для планирования задачи отправьте её в формате:\\n*01.01.2022 20:00 Сделать домашнюю работу*",
+                            "Привет! " +
+                                    "Для планирования задачи отправьте её в формате:\n*01.01.2022 20:00 Сделать домашнюю работу*",
                             ParseMode.Markdown
                     );
                     LOG.info("the greeting message has been sent");

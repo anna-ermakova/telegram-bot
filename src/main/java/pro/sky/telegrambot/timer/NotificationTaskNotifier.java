@@ -4,7 +4,7 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 import pro.sky.telegrambot.repository.NotificationTaskRepository;
-import pro.sky.telegrambot.servise.TelegramBotService;
+import pro.sky.telegrambot.service.TelegramBotService;
 
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;

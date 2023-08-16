@@ -1,4 +1,4 @@
-package pro.sky.telegrambot.servise;
+package pro.sky.telegrambot.service;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -27,5 +27,4 @@ public class NotificationTaskService {
                 )
         );
     }
-
 }

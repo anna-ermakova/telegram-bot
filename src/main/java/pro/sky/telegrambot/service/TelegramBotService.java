@@ -1,4 +1,4 @@
-package pro.sky.telegrambot.servise;
+package pro.sky.telegrambot.service;
 
 import com.pengrad.telegrambot.TelegramBot;
 import com.pengrad.telegrambot.model.request.ParseMode;
